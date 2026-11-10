@@ -7,7 +7,7 @@ function Breadcrumb({ items = DEFAULT_CRUMBS }) {
   return (
     <nav
       aria-label="Miga de pan"
-      className="bg-slate-100 dark:bg-sazon-verdeNutresaCard/70 border-b border-slate-200 dark:border-emerald-900/40 py-2 px-4 text-xs font-mono-tag overflow-x-auto"
+      className="bg-slate-100/60 dark:bg-sazon-verdeNutresaCard/70 border-b border-slate-200/80 dark:border-emerald-900/40 py-2 px-4 sm:px-6 lg:px-8 text-xs font-mono-tag overflow-x-auto"
     >
       <ol className="max-w-7xl mx-auto flex items-center gap-2 whitespace-nowrap list-none m-0 p-0">
         {items.map((crumb, index) => {

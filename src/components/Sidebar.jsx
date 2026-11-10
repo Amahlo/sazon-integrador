@@ -47,10 +47,16 @@ const DEFAULT_MODULES = [
   },
 ]
 
-function Sidebar({ modules = DEFAULT_MODULES, onClose }) {
-  const handleClose = () => {
+function Sidebar({ modules = DEFAULT_MODULES, isOpen = false, onClose }) {
+  const handleClose = (e) => {
+    if (e) {
+      e.preventDefault()
+      e.stopPropagation()
+    }
     if (onClose) {
       onClose()
+    } else if (typeof window !== 'undefined' && typeof window.closeSidebar === 'function') {
+      window.closeSidebar()
     } else if (typeof window !== 'undefined' && typeof window.toggleSidebar === 'function') {
       window.toggleSidebar()
     }
@@ -60,15 +66,18 @@ function Sidebar({ modules = DEFAULT_MODULES, onClose }) {
     <>
       {/* Overlay */}
       <section
-        className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 hidden opacity-0 transition-opacity duration-300 cursor-pointer"
+        className={`fixed inset-0 bg-black/50 backdrop-blur-sm z-40 transition-opacity duration-300 cursor-pointer ${
+          isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none hidden'
+        }`}
         id="sidebar-overlay"
-        data-action="toggle-sidebar"
         onClick={handleClose}
       ></section>
 
       {/* Sidebar Panel */}
       <aside
-        className="fixed inset-y-0 left-0 h-screen w-80 sm:w-96 bg-sazon-verdeHoja text-white z-50 shadow-2xl -translate-x-full flex flex-col justify-between p-6 overflow-y-auto"
+        className={`fixed inset-y-0 left-0 h-screen w-80 sm:w-96 bg-sazon-verdeHoja text-white z-50 shadow-2xl flex flex-col justify-between p-6 overflow-y-auto transition-transform duration-300 ease-in-out ${
+          isOpen ? 'translate-x-0' : '-translate-x-full'
+        }`}
         id="sidebar"
       >
         <section className="flex flex-col flex-1 pb-4">
@@ -87,7 +96,6 @@ function Sidebar({ modules = DEFAULT_MODULES, onClose }) {
             <button
               aria-label="Cerrar menú"
               className="p-1.5 rounded-lg hover:bg-white/20 text-white text-lg transition-colors cursor-pointer"
-              data-action="toggle-sidebar"
               type="button"
               onClick={handleClose}
             >
@@ -125,7 +133,6 @@ function Sidebar({ modules = DEFAULT_MODULES, onClose }) {
           <button
             className="w-full flex items-center justify-center gap-2.5 px-4 py-3 rounded-2xl bg-white/15 hover:bg-white/25 border border-white/30 backdrop-blur-md text-white text-xs font-poppins font-bold transition-all shadow-md group cursor-pointer"
             id="btn-close-sidebar"
-            data-action="toggle-sidebar"
             type="button"
             onClick={handleClose}
           >

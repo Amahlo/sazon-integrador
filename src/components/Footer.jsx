@@ -28,9 +28,9 @@ function Footer({
       className="relative z-20 bg-sazon-cacao dark:bg-sazon-verdeNutresa/95 text-white/90 py-3 px-4 sm:px-8 border-t border-black/10 dark:border-white/10 transition-colors duration-300"
       id="main-footer"
     >
-      <section className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-2.5">
+      <section className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 pr-0 lg:pr-28">
         <article className="text-center md:text-left space-y-0.5">
-          <p className="font-poppins font-bold text-xs m-0 text-white">{team}</p>
+          <p className="font-poppins font-bold text-xs m-0 text-white leading-tight">{team}</p>
           <p className="font-mono-tag text-[10px] text-white/70 m-0">{copyright}</p>
         </article>
 
@@ -38,7 +38,7 @@ function Footer({
           {brands.map((brand) => (
             <span
               key={brand.name}
-              className="h-7 px-2.5 rounded-full bg-white/90 hover:bg-white border border-white/20 flex items-center justify-center shadow-sm transition-all"
+              className="h-7 px-2.5 rounded-full bg-white border border-white/20 flex items-center justify-center shadow-xs transition-all"
               title={brand.name}
             >
               <img

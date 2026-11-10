@@ -46,6 +46,11 @@ if (typeof tailwind !== 'undefined') {
 }
 
 function toggleSidebar() {
+  // Si React ya expuso su toggleSidebar reactivo, llamarlo
+  if (typeof window !== 'undefined' && typeof window.toggleSidebar === 'function' && window.toggleSidebar !== toggleSidebar) {
+    window.toggleSidebar();
+    return;
+  }
   const sidebar = document.getElementById('sidebar');
   const overlay = document.getElementById('sidebar-overlay');
   if (!sidebar || !overlay) return;
@@ -178,7 +183,14 @@ function initGlobals() {
   });
 
   document.querySelectorAll('[data-action="toggle-sidebar"]').forEach(el => {
-    el.addEventListener('click', toggleSidebar);
+    if (!el.dataset.listenerAttached) {
+      el.dataset.listenerAttached = 'true';
+      el.addEventListener('click', (e) => {
+        // Evitar doble toggle si React ya lo manejó
+        if (e.defaultPrevented) return;
+        toggleSidebar();
+      });
+    }
   });
 
   document.getElementById('btn-notifications')?.addEventListener('click', () => {

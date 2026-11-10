@@ -1,5 +1,9 @@
 function TopBar({ onToggleSidebar, onSearch }) {
-  const handleToggle = () => {
+  const handleToggle = (e) => {
+    if (e) {
+      e.preventDefault()
+      e.stopPropagation()
+    }
     if (onToggleSidebar) {
       onToggleSidebar()
     } else if (typeof window !== 'undefined' && typeof window.toggleSidebar === 'function') {
@@ -25,7 +29,6 @@ function TopBar({ onToggleSidebar, onSearch }) {
         <section className="flex items-center gap-3 shrink-0">
           <button
             className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-emerald-50/80 dark:bg-emerald-950/60 text-sazon-verdeHoja dark:text-sazon-verdeNeon hover:bg-sazon-verdeHoja hover:text-white dark:hover:bg-sazon-verdeHoja dark:hover:text-white border border-emerald-200/70 dark:border-emerald-800/50 text-xs font-poppins font-bold transition-all cursor-pointer shadow-xs"
-            data-action="toggle-sidebar"
             id="btn-toggle-menu"
             type="button"
             onClick={handleToggle}
