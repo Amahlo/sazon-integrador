@@ -1,0 +1,75 @@
+.gestion-catalogo-content { width: 100%; }
+.gestion-catalogo-subnav { margin: -1.25rem -1.25rem 0; padding: 0.5rem 1.25rem; border-bottom: 1px solid rgba(148,163,184,.28); background: rgba(226,232,240,.4); }
+.gestion-catalogo-subnav-inner { max-width: 80rem; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: .75rem; }
+.gestion-catalogo-module-title { display: flex; align-items: center; gap: .5rem; }
+.gestion-catalogo-module-title h2 { margin: 0; color: #0f172a; font-family: 'Poppins',sans-serif; font-size: .875rem; font-weight: 700; }
+.gestion-catalogo-cell { border-radius: .375rem; background: #3d8e33; color: #fff; padding: .125rem .5rem; font-family: 'IBM Plex Mono',monospace; font-size: .6875rem; font-weight: 700; }
+.gestion-catalogo-tabs { display: flex; align-items: center; gap: .375rem; border-radius: .75rem; background: rgba(203,213,225,.7); padding: .25rem; font-family: 'IBM Plex Mono',monospace; font-size: .75rem; font-weight: 600; }
+.gestion-catalogo-tab { border: 0; border-radius: .5rem; background: transparent; color: #475569; padding: .375rem .75rem; display: inline-flex; align-items: center; gap: .375rem; cursor: pointer; transition: all .2s ease; }
+.gestion-catalogo-tab.is-active { background: #fff; color: #3d8e33; box-shadow: 0 1px 3px rgba(15,23,42,.12); font-weight: 700; }
+.gestion-catalogo-banner { position: relative; overflow: hidden; border: 1px solid rgba(6,95,70,.4); border-radius: 1.5rem; background: linear-gradient(90deg,#022c22,#1b4332 55%,#064e3b); color: #fff; padding: 2.5rem; box-shadow: 0 20px 25px -12px rgba(15,23,42,.25); }
+.gestion-catalogo-banner-content { position: relative; z-index: 1; max-width: 42rem; }
+.gestion-catalogo-eyebrow { display: inline-flex; align-items: center; gap: .5rem; border: 1px solid rgba(102,209,73,.5); border-radius: 999px; background: rgba(61,142,51,.3); color: #66d149; padding: .25rem .75rem; font-family: 'IBM Plex Mono',monospace; font-size: .75rem; font-weight: 700; text-transform: uppercase; }
+.gestion-catalogo-banner h2 { margin: .75rem 0 0; color: #fff; font-family: 'Poppins',sans-serif; font-size: clamp(1.875rem,4vw,2.5rem); line-height: 1.15; font-weight: 800; }
+.gestion-catalogo-banner h2 em { color: #66d149; }
+.gestion-catalogo-banner p { margin: .75rem 0 0; color: rgba(209,250,229,.9); font-size: .875rem; line-height: 1.7; }
+.gestion-catalogo-brands { display: flex; flex-wrap: wrap; gap: .5rem; padding-top: .5rem; }
+.gestion-catalogo-brand { display: inline-flex; align-items: center; gap: .25rem; border: 1px solid; border-radius: 999px; padding: .25rem .75rem; font-family: 'IBM Plex Mono',monospace; font-size: .75rem; font-weight: 700; }
+.brand-zenu { border-color:#d32f2f;background:rgba(211,47,47,.2);color:#fca5a5 }
+.brand-doria { border-color:#e65100;background:rgba(230,81,0,.2);color:#fdba74 }
+.brand-pietran { border-color:#2e7d32;background:rgba(46,125,50,.2);color:#6ee7b7 }
+.brand-noel { border-color:#c2185b;background:rgba(194,24,91,.2);color:#f9a8d4 }
+.gestion-catalogo-metrics { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 1rem; }
+.gestion-catalogo-metric { display:flex;align-items:center;gap:.75rem;border:1px solid #e2e8f0;border-radius:1rem;background:#fff;padding:1rem;box-shadow:0 1px 3px rgba(15,23,42,.06); }
+.gestion-catalogo-metric-icon { width:2.5rem;height:2.5rem;flex:0 0 2.5rem;border-radius:.75rem;display:inline-flex;align-items:center;justify-content:center;font-size:1.25rem }
+.metric-green{background:#d1fae5;color:#3d8e33}.metric-amber{background:#fef3c7;color:#d97706}.metric-blue{background:#dbeafe;color:#2563eb}.metric-purple{background:#f3e8ff;color:#9333ea}
+.gestion-catalogo-metric strong,.gestion-catalogo-metric div span { display:block }
+.gestion-catalogo-metric strong { color:#0f172a;font-family:'Poppins',sans-serif;font-size:1.125rem;line-height:1 }
+.gestion-catalogo-metric div span { margin-top:.25rem;color:#94a3b8;font-family:'IBM Plex Mono',monospace;font-size:.625rem }
+.gestion-catalogo-view { display:grid;gap:1.5rem }
+.gestion-catalogo-view-header,.gestion-catalogo-form-heading { border-bottom:1px solid #e2e8f0;padding-bottom:.75rem }
+.gestion-catalogo-view-header { display:flex;align-items:center;justify-content:space-between;gap:1rem }
+.gestion-catalogo-view-header h3,.gestion-catalogo-form-heading h3 { margin:0;display:flex;align-items:center;gap:.5rem;color:#0f172a;font-family:'Poppins',sans-serif;font-size:1.25rem;font-weight:700 }
+.gestion-catalogo-view-header h3 i,.gestion-catalogo-form-heading h3 i { color:#3d8e33 }
+.gestion-catalogo-view-header p,.gestion-catalogo-form-heading p { margin:.25rem 0 0;color:#64748b;font-family:'IBM Plex Mono',monospace;font-size:.75rem }
+.gestion-catalogo-primary-button,.gestion-catalogo-secondary-button { border-radius:.75rem;padding:.625rem 1rem;display:inline-flex;align-items:center;justify-content:center;gap:.5rem;font-family:'IBM Plex Mono',monospace;font-size:.75rem;font-weight:700;cursor:pointer;transition:all .2s ease }
+.gestion-catalogo-primary-button { border:0;background:#3d8e33;color:#fff;box-shadow:0 4px 10px rgba(61,142,51,.2) }
+.gestion-catalogo-primary-button:hover { background:#067647 }
+.gestion-catalogo-secondary-button { border:1px solid #cbd5e1;background:transparent;color:#475569 }
+.gestion-catalogo-chip-panel,.gestion-catalogo-form-card { border:1px solid #e2e8f0;border-radius:1rem;background:#fff;box-shadow:0 1px 3px rgba(15,23,42,.06) }
+.gestion-catalogo-chip-panel { padding:1.5rem }
+.gestion-catalogo-chip-heading { display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #f1f5f9;padding-bottom:.75rem;color:#475569;font-family:'IBM Plex Mono',monospace;font-size:.75rem;font-weight:700;text-transform:uppercase }
+.gestion-catalogo-chip-heading span:last-child { color:#3d8e33;font-size:.6875rem;text-transform:none }
+.gestion-catalogo-chips { min-height:80px;margin:1rem 0 0;padding:0;display:flex;flex-wrap:wrap;gap:.625rem;list-style:none }
+.gestion-catalogo-chip { display:inline-flex;align-items:center;gap:.5rem;border:1px solid #cbd5e1;border-radius:999px;background:#f1f5f9;color:#1e293b;padding:.375rem .875rem;font-family:'IBM Plex Mono',monospace;font-size:.75rem;font-weight:600;box-shadow:0 1px 2px rgba(15,23,42,.06);transition:border-color .2s ease }
+.gestion-catalogo-chip:hover { border-color:#3d8e33 }
+.gestion-catalogo-chip>i { color:#3d8e33;font-size:.75rem }
+.gestion-catalogo-chip button { border:0;background:transparent;color:#94a3b8;margin-left:.25rem;padding:0;cursor:pointer;transition:color .2s ease }
+.gestion-catalogo-chip button:hover { color:#ef4444 }
+.gestion-catalogo-empty { margin:1.5rem 0 0;color:#94a3b8;text-align:center;font-family:'IBM Plex Mono',monospace;font-size:.75rem }
+.gestion-catalogo-form-card { max-width:42rem;margin:0 auto;padding:1.5rem }
+.gestion-catalogo-form { display:grid;gap:1.5rem }
+.gestion-catalogo-form fieldset { display:grid;gap:1rem;border:1px solid #e2e8f0;border-radius:1rem;padding:1.5rem }
+.gestion-catalogo-form legend { border:1px solid #e2e8f0;border-radius:.375rem;background:#fff;color:#3d8e33;padding:0 .75rem;font-family:'Poppins',sans-serif;font-size:.875rem;font-weight:700 }
+.gestion-catalogo-field { display:grid;gap:.375rem }
+.gestion-catalogo-field label { color:#334155;font-family:'IBM Plex Mono',monospace;font-size:.75rem;font-weight:700 }
+.gestion-catalogo-field label span { color:#ef4444 }
+.gestion-catalogo-field input { width:100%;border:1px solid #cbd5e1;border-radius:.75rem;background:#f8fafc;color:#0f172a;padding:.625rem 1rem;font-family:'IBM Plex Mono',monospace;font-size:.75rem;outline:none }
+.gestion-catalogo-field input:focus { border-color:#3d8e33;box-shadow:0 0 0 2px rgba(61,142,51,.18) }
+.gestion-catalogo-form-actions { display:flex;align-items:center;justify-content:flex-end;gap:.75rem }
+.dark .gestion-catalogo-subnav { border-color:rgba(16,185,129,.25);background:rgba(19,51,38,.8) }
+.dark .gestion-catalogo-module-title h2,.dark .gestion-catalogo-view-header h3,.dark .gestion-catalogo-form-heading h3,.dark .gestion-catalogo-metric strong { color:#fff }
+.dark .gestion-catalogo-tabs { background:#133326 }.dark .gestion-catalogo-tab{color:#94a3b8}.dark .gestion-catalogo-tab.is-active{background:#1b4332;color:#66d149}
+.dark .gestion-catalogo-metric,.dark .gestion-catalogo-chip-panel,.dark .gestion-catalogo-form-card { border-color:rgba(16,185,129,.35);background:#133326 }
+.dark .gestion-catalogo-view-header,.dark .gestion-catalogo-form-heading,.dark .gestion-catalogo-chip-heading,.dark .gestion-catalogo-form fieldset { border-color:rgba(16,185,129,.25) }
+.dark .gestion-catalogo-chip-heading,.dark .gestion-catalogo-field label,.dark .gestion-catalogo-secondary-button { color:#cbd5e1 }
+.dark .gestion-catalogo-chip{border-color:#065f46;background:#1b4332;color:#f1f5f9}
+.dark .gestion-catalogo-form legend,.dark .gestion-catalogo-secondary-button{border-color:#065f46;background:#133326}
+.dark .gestion-catalogo-field input{border-color:#065f46;background:#1b4332;color:#fff}
+@media(max-width:767px){
+  .gestion-catalogo-subnav{margin:-1.25rem -1rem 0}.gestion-catalogo-subnav-inner{flex-direction:column}.gestion-catalogo-tabs{width:100%}.gestion-catalogo-tab{flex:1;justify-content:center}.gestion-catalogo-tab span{display:none}
+  .gestion-catalogo-banner{padding:1.5rem}.gestion-catalogo-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.gestion-catalogo-view-header{align-items:flex-start}.gestion-catalogo-primary-button{white-space:nowrap}.gestion-catalogo-chip-heading{align-items:flex-start;gap:.5rem}
+}
+@media(max-width:480px){
+  .gestion-catalogo-metrics{grid-template-columns:1fr}.gestion-catalogo-view-header{flex-direction:column}.gestion-catalogo-form-actions{align-items:stretch;flex-direction:column-reverse}.gestion-catalogo-form-actions button{width:100%}
+}
