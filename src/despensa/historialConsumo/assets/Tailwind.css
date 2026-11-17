@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-sazon-marfil: #F4F4E8;
+  --color-sazon-cacao: #643B22;
+  --color-sazon-cacaoText: #F4F4E8;
+  --color-sazon-verdeNoche: #114622;
+  --color-sazon-verdeHondo: #215B33;
+  --color-sazon-verdeHoja: #3D8E33;
+  --color-sazon-hoja: #7FBA00;
+  --color-sazon-verdeNutresa: #1B4332;
+  --color-sazon-verdeNutresaCard: #133326;
+  --color-sazon-verdeNeon: #66d149;
+  --color-sazon-texto: #3F4040;
+  --color-sazon-texto2: #5B5E60;
+  --color-sazon-brandZenu: #D32F2F;
+  --color-sazon-brandDoria: #E65100;
+  --color-sazon-brandPietran: #2E7D32;
+  --color-sazon-brandNoel: #C2185B;
+}
+
+.historial-consumo-page {
+  font-family: 'Inter', sans-serif;
+}
+
+.historial-consumo-page h1,
+.historial-consumo-page h2,
+.historial-consumo-page h3,
+.historial-consumo-page h4,
+.historial-consumo-page h5,
+.historial-consumo-page h6,
+.historial-consumo-page .font-title {
+  font-family: 'Poppins', sans-serif;
+}
+
+.historial-consumo-page button,
+.historial-consumo-page input,
+.historial-consumo-page select,
+.historial-consumo-page label,
+.historial-consumo-page .font-mono-tag,
+.historial-consumo-page code,
+.historial-consumo-page .badge,
+.historial-consumo-page time,
+.historial-consumo-page .despensa-faltante-label,
+.historial-consumo-page .tech-tag {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.historial-consumo-page * {
+  box-sizing: border-box;
+}
+
+.historial-consumo-page .despensa-faltante-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 0.75rem;
+  font-size: 0.625rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.historial-consumo-page ::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+.historial-consumo-page ::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.dark .historial-consumo-page ::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.historial-consumo-page ::-webkit-scrollbar-thumb {
+  background: #3D8E33;
+  border-radius: 4px;
+}
